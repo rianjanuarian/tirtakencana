@@ -3,17 +3,15 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Customer;
+ use App\Models\CustomerTTHDetail;
 
-class CustomerController extends Controller
+class CustomertthdetailController extends Controller
 {
-    public function index()
+     public function index()
     {
         return response()->json([
             'status' => true,
-            'data' => Customer::with('tth')->get()
+            'data' => CustomerTTHDetail::all()
         ]);
     }
-
-
 }

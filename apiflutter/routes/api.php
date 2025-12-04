@@ -3,6 +3,9 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\CustomerController;
+use App\Http\Controllers\Api\CustomertthController;
+use App\Http\Controllers\Api\MobileconfigController;
+use App\Http\Controllers\Api\CustomertthdetailController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -20,3 +23,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
  
 
 Route::get('/customers', [CustomerController::class, 'index']);
+Route::get('/customertth', [CustomertthController::class, 'index']);
+Route::get('/mobileconfig', [MobileconfigController::class, 'index']);
+Route::get('/customertthdetail', [CustomertthdetailController::class, 'index']);

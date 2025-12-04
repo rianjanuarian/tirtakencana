@@ -3,17 +3,15 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Customer;
+use App\Models\MobileConfig;
 
-class CustomerController extends Controller
+class MobileconfigController extends Controller
 {
     public function index()
     {
         return response()->json([
             'status' => true,
-            'data' => Customer::with('tth')->get()
+            'data' => MobileConfig::all()
         ]);
     }
-
-
 }

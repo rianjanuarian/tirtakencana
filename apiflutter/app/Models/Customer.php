@@ -10,6 +10,14 @@ class Customer extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'CustID', 'Name', 'Address', 'BranchCode', 'PhoneNo'
+        'CustID',
+        'Name',
+        'Address',
+        'BranchCode',
+        'PhoneNo'
     ];
+    public function tth()
+    {
+        return $this->hasMany(CustomerTTH::class, 'CustID', 'CustID');
+    }
 }
